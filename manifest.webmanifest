@@ -1,0 +1,9 @@
+{
+  "name": "ANNDI BLOCK",
+  "short_name": "ANNDI",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0d0f",
+  "theme_color": "#111315",
+  "description": "Protótipo de interface do ANNDI BLOCK"
+}

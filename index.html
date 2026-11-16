@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111315">
+  <meta name="description" content="ANNDI BLOCK — painel demonstrativo de proteção de navegação.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>ANNDI BLOCK</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">A</div>
+      <div class="brand">
+        <div class="brand-name">ANNDI <span>BLOCK</span></div>
+        <div class="brand-sub">SMART AD PROTECTION</div>
+      </div>
+      <span class="version">BETA 0.1</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">PAINEL DE PROTEÇÃO</p>
+      <h1>Navegue com<br><span>mais tranquilidade.</span></h1>
+      <p class="intro">Controle demonstrativo da experiência ANNDI BLOCK.</p>
+    </section>
+
+    <section class="status-card" aria-labelledby="status-title">
+      <div class="status-head">
+        <div>
+          <p class="eyebrow">STATUS DO SISTEMA</p>
+          <h2 id="status-title">Proteção demonstrativa</h2>
+        </div>
+        <span id="status-pill" class="pill off">DESATIVADA</span>
+      </div>
+      <div class="shield" aria-hidden="true"><span>✓</span></div>
+      <p id="status-copy" class="status-copy">Ative o controle para explorar o painel.</p>
+      <button id="toggle" class="primary" type="button" aria-pressed="false">Ativar demonstração</button>
+      <p class="fineprint">Este botão altera apenas a demonstração. Ainda não filtra anúncios nem modifica o tráfego do navegador.</p>
+    </section>
+
+    <section class="stats">
+      <div class="section-heading"><h2>Visão geral</h2><span>DEMO</span></div>
+      <div class="stat-grid">
+        <article class="stat-card">
+          <span class="stat-icon">◎</span>
+          <p class="stat-label">Itens filtrados</p>
+          <strong id="filtered">—</strong>
+          <small>Sem dados reais nesta versão</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon">◈</span>
+          <p class="stat-label">Rastreadores</p>
+          <strong id="trackers">—</strong>
+          <small>Monitoramento ainda não conectado</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="settings">
+      <div class="section-heading"><h2>Recursos</h2><span>EM PREPARAÇÃO</span></div>
+      <div class="setting-row">
+        <div class="setting-icon">◉</div>
+        <div class="setting-text"><strong>Filtro de publicidade</strong><small>Motor de regras a implementar</small></div>
+        <span class="tag">FUTURO</span>
+      </div>
+      <div class="setting-row">
+        <div class="setting-icon">◇</div>
+        <div class="setting-text"><strong>Proteção de privacidade</strong><small>Filtros contra rastreadores</small></div>
+        <span class="tag">FUTURO</span>
+      </div>
+      <div class="setting-row">
+        <div class="setting-icon">▶</div>
+        <div class="setting-text"><strong>Compatibilidade com vídeo</strong><small>Sujeita a testes e políticas das plataformas</small></div>
+        <span class="tag">FUTURO</span>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-logo">ANNDI BLOCK</div>
+      <p>Privacidade com transparência.</p>
+      <p class="disclaimer">Protótipo de interface v0.1 · Não é um bloqueador funcional.</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
