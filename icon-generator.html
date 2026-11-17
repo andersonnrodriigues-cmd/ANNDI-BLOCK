@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANNDI BLOCK - Icon Generator</title>
+<style>
+body {
+  background: #171717;
+  color: #eee;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 25px;
+}
+h1 { letter-spacing: 3px; }
+canvas {
+  width: 220px;
+  height: 220px;
+  border-radius: 25px;
+  margin: 20px;
+}
+button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 12px auto;
+  padding: 16px;
+  border: 0;
+  border-radius: 12px;
+  background: #c0c0c0;
+  color: #171717;
+  font-weight: bold;
+  font-size: 15px;
+}
+</style>
+</head>
+<body>
+
+<h1>ANNDI BLOCK</h1>
+<p>Gerador oficial de ícones</p>
+
+<canvas id="icon" width="512" height="512"></canvas>
+
+<button onclick="downloadIcon(48)">
+Baixar ícone 48 × 48
+</button>
+
+<button onclick="downloadIcon(128)">
+Baixar ícone 128 × 128
+</button>
+
+<script>
+const canvas = document.getElementById("icon");
+const ctx = canvas.getContext("2d");
+
+function drawIcon() {
+  ctx.fillStyle = "#202020";
+  ctx.fillRect(0, 0, 512, 512);
+
+  ctx.shadowColor = "#000";
+  ctx.shadowBlur = 20;
+
+  const shield = new Path2D();
+  shield.moveTo(256, 65);
+  shield.lineTo(405, 125);
+  shield.lineTo(390, 300);
+  shield.quadraticCurveTo(365, 405, 256, 455);
+  shield.quadraticCurveTo(147, 405, 122, 300);
+  shield.lineTo(107, 125);
+  shield.closePath();
+
+  const gradient = ctx.createLinearGradient(100, 70, 410, 450);
+  gradient.addColorStop(0, "#f1f1f1");
+  gradient.addColorStop(0.5, "#777777");
+  gradient.addColorStop(1, "#dedede");
+
+  ctx.fillStyle = gradient;
+  ctx.fill(shield);
+
+  ctx.shadowBlur = 0;
+
+  ctx.strokeStyle = "#ffffff";
+  ctx.lineWidth = 5;
+  ctx.stroke(shield);
+
+  ctx.fillStyle = "#202020";
+  ctx.font = "bold 260px Arial";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("A", 256, 260);
+}
+
+function downloadIcon(size) {
+  const output = document.createElement("canvas");
+  output.width = size;
+  output.height = size;
+
+  output.getContext("2d").drawImage(
+    canvas, 0, 0, size, size
+  );
+
+  const link = document.createElement("a");
+  link.download = "icon" + size + ".png";
+  link.href = output.toDataURL("image/png");
+  link.click();
+}
+
+drawIcon();
+</script>
+
+</body>
+</html>
