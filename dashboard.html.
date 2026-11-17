@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANNDI BLOCK - Painel</title>
+  <style>
+    body {
+      background: #171717;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px 15px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #252525;
+      padding: 25px;
+      border-radius: 18px;
+    }
+    h1 {
+      letter-spacing: 3px;
+      color: #ddd;
+    }
+    .status {
+      margin-top: 25px;
+      padding: 20px;
+      background: #303030;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ANNDI BLOCK</h1>
+    <p>Proteção inteligente na internet</p>
+
+    <div class="status">
+      <h2>Painel de proteção</h2>
+      <p>Motor de bloqueio: em desenvolvimento</p>
+      <p>Proteção contra rastreadores: em desenvolvimento</p>
+    </div>
+
+    <p>ANNDI BLOCK © 2026</p>
+  </div>
+</body>
+</html>
