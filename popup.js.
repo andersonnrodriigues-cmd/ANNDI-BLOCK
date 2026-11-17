@@ -1,0 +1,14 @@
+
+const statusElement = document.getElementById("status");
+
+chrome.declarativeNetRequest.getEnabledRulesets()
+  .then((rulesets) => {
+    statusElement.textContent =
+      rulesets.length > 0
+        ? "Proteção ativa"
+        : "Proteção não ativada";
+  })
+  .catch(() => {
+    statusElement.textContent =
+      "Aguardando instalação da extensão";
+  });
