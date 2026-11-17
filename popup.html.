@@ -29,6 +29,7 @@
     }
   </style>
 </head>
+<script src="popup.js"></script>
 <body>
   <h1>ANNDI BLOCK</h1>
   <p>Proteção inteligente</p>
