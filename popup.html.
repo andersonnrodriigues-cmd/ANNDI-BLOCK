@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANNDI BLOCK</title>
+  <style>
+    body {
+      background: #171717;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 25px;
+      width: 250px;
+    }
+    h1 {
+      color: #d0d0d0;
+      letter-spacing: 2px;
+    }
+    p {
+      color: #aaa;
+    }
+    .status {
+      background: #292929;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>ANNDI BLOCK</h1>
+  <p>Proteção inteligente</p>
+  <div class="status">
+    <strong>ANNDI BLOCK</strong>
+    <p>Extensão em desenvolvimento</p>
+  </div>
+</body>
+</html>
