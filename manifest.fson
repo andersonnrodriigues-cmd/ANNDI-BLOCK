@@ -1,8 +1,9 @@
 
+
 {
   "manifest_version": 3,
   "name": "ANNDI BLOCK",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bloqueador inteligente de anúncios e rastreadores.",
   "permissions": [
     "declarativeNetRequest"
@@ -10,6 +11,13 @@
   "host_permissions": [
     "<all_urls>"
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "ANNDI BLOCK",
+    "default_popup": "popup.html"
+  },
   "declarative_net_request": {
     "rule_resources": [
       {
@@ -18,9 +26,5 @@
         "path": "rules.json"
       }
     ]
-  },
-  "icons": {
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
   }
 }
