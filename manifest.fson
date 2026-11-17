@@ -1,0 +1,26 @@
+
+{
+  "manifest_version": 3,
+  "name": "ANNDI BLOCK",
+  "version": "1.0.0",
+  "description": "Bloqueador inteligente de anúncios e rastreadores.",
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "adblock_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
