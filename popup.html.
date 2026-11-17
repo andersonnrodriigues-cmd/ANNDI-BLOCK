@@ -34,7 +34,7 @@
   <p>Proteção inteligente</p>
   <div class="status">
     <strong>ANNDI BLOCK</strong>
-    <p>Extensão em desenvolvimento</p>
+    <p id="status">Verificando proteção...</p>
   </div>
 </body>
 </html>
