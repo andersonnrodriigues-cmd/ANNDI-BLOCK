@@ -1,16 +1,44 @@
+
 const toggle = document.querySelector('#toggle');
 const pill = document.querySelector('#status-pill');
 const copy = document.querySelector('#status-copy');
-let demoEnabled = false;
+
+const STORAGE_KEY = 'anndi-block-enabled';
+
+let protectionEnabled =
+  localStorage.getItem(STORAGE_KEY) !== 'false';
+
+function updatePanel() {
+  toggle.setAttribute(
+    'aria-pressed',
+    String(protectionEnabled)
+  );
+
+  toggle.textContent = protectionEnabled
+    ? 'Desativar proteção'
+    : 'Ativar proteção';
+
+  pill.textContent = protectionEnabled
+    ? 'ATIVADA'
+    : 'DESATIVADA';
+
+  pill.classList.toggle('on', protectionEnabled);
+  pill.classList.toggle('off', !protectionEnabled);
+
+  copy.textContent = protectionEnabled
+    ? 'Proteção visual ativada. O bloqueio real ainda não está implementado.'
+    : 'Proteção desativada. O painel continua disponível.';
+}
 
 toggle.addEventListener('click', () => {
-  demoEnabled = !demoEnabled;
-  toggle.setAttribute('aria-pressed', String(demoEnabled));
-  toggle.textContent = demoEnabled ? 'Desativar demonstração' : 'Ativar demonstração';
-  pill.textContent = demoEnabled ? 'DEMO ATIVA' : 'DESATIVADA';
-  pill.classList.toggle('on', demoEnabled);
-  pill.classList.toggle('off', !demoEnabled);
-  copy.textContent = demoEnabled
-    ? 'Demonstração ativada. Nenhum anúncio está sendo bloqueado nesta versão.'
-    : 'Demonstração desativada. O painel continua disponível.';
+  protectionEnabled = !protectionEnabled;
+
+  localStorage.setItem(
+    STORAGE_KEY,
+    String(protectionEnabled)
+  );
+
+  updatePanel();
 });
+
+updatePanel();
